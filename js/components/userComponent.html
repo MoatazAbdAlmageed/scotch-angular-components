@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" >
 
 
 <h1>Users Table</h1>
@@ -8,13 +8,18 @@
         <td>Name</td>
         <td>City</td>
         <td>Country</td>
+        <td>Action</td>
         </th>
         <!-- users will be displayed here-->
-        <tr ng-repeat="user in $ctrl.records">
+        <tr ng-repeat="user in $ctrl.records" >
             <td></td>
-            <td> {{user.name}}</td>
+            <td > {{user.name}}</td>
             <td>{{user.city}}</td>
             <td>{{user.country}}</td>
+            <td>   <button class="btn btn-xs btn-danger" ng-click="$ctrl.destroyUser(user)">
+                destroy
+            </button></td>
+
         </tr>
     </table>
 </div>

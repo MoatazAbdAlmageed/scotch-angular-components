@@ -15,7 +15,10 @@
         },
         // Loads the component template
         templateUrl: '/js/components/userComponent.html',
-        controller: function () {
+        controller: function ($scope) {
+
+
+
 
             // The list of users we will be displaying
             this.records = [{
@@ -39,6 +42,14 @@
                 city: "Madrid",
                 country: "Spain"
             }];
+
+
+            this.destroyUser = function(item) {
+                // console.log('wwww');
+                var index = this.records.indexOf(item);
+                this.records.splice(index, 1);
+            };
+
         }
     });
 })();
